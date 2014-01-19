@@ -15,6 +15,10 @@ import com.example.androidmvpsample.ICustomer;
 import com.example.androidmvpsample.ICustomerView;
 
 public class CustomerPresenterTest {
+	static boolean isCalledSetIdMethod;
+	static boolean isCalledSetFirstNameMethod;
+	static boolean isCalledSetLastNameMethod;
+	static boolean isCalledShowDialogMethod;
 
 	@Before
 	public void setUp() throws Exception {
@@ -51,10 +55,6 @@ public class CustomerPresenterTest {
 		assertEquals("mCustomer.getLastNmae() is", "lastname", customer.getLastName());
 	}
 
-	static boolean isCalledSetIdMethod;
-	static boolean isCalledSetFirstNameMethod;
-	static boolean isCalledSetLastNameMethod;
-	static boolean isCalledShowDialogMethod;
 
 	@Test
 	public void testLoadCustomer() throws IllegalArgumentException, IllegalAccessException, SecurityException, NoSuchFieldException {
